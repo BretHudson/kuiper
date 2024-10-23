@@ -1,0 +1,69 @@
+body {
+	font-family: sans-serif;
+}
+
+header {
+	display: grid;
+	justify-items: center;
+	align-items: flex-end;
+	width: 100%;
+	aspect-ratio: 16 / 6;
+	background-image: url('../img/kuiper-lick.jpg');
+	background-size: cover;
+	background-position: center 85%;
+}
+
+header h1 {
+	font-size: 2rem;
+	font-weight: 700;
+	padding-bottom: 1rem;
+	text-shadow: #000 1px 0 10px;
+}
+
+main {
+	margin-inline: auto;
+	max-width: var(--p-max-width, 65ch);
+	padding: 2rem;
+	height: 100vh;
+}
+
+section {
+	--padding: 1.5rem;
+	display: grid;
+	grid-template-columns: var(--padding) [inner-start] 1fr [inner-end] var(
+			--padding
+		);
+}
+
+section > h2 {
+	grid-column: inner;
+	font-weight: 700;
+	font-size: 2rem;
+	text-transform: uppercase;
+}
+
+section + section {
+	margin-top: var(--padding);
+}
+
+p + p {
+	margin-top: 0.5rem;
+}
+
+.section-inner {
+	grid-column: 1 / -1;
+	border: 2px solid #fffa;
+	border-radius: 2rem;
+	line-height: 1.6;
+	margin-top: 0.25rem;
+	padding: calc(var(--padding) - 0.25rem) var(--padding);
+}
+
+.section-inner h3 {
+	font-weight: 700;
+	font-size: 1.25rem;
+}
+
+.section-inner ul {
+	padding-left: 1.5rem;
+}
